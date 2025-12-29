@@ -1,0 +1,72 @@
+{
+  "name": "sweet",
+  "repository": "https://github.com/DatGreekChick/sweet",
+  "author": "Eleni Arvanitis Konior",
+  "license": "ISC",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal starter boilerplate for client-side React apps deployed to Firebase Hosting, using Bun, RTK Query, and styled-components.",
+  "main": "main.js",
+  "type": "module",
+  "keywords": [
+    "firebase",
+    "react",
+    "bun",
+    "rtk-query",
+    "styled-components",
+    "boilerplate"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production bun run build.js",
+    "clean": "rm public/chunk*.js LICENSE.txt firebase-debug.log",
+    "deploy": "bun run build && bunx firebase deploy",
+    "lint": "bun run clean && bunx eslint .",
+    "lint:fix": "bun run lint --fix",
+    "prettier": "bunx prettier --write \"./**/*.{js,jsx,md}\"",
+    "start": "NODE_ENV=development bun dev.js"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "arrowParens": "avoid",
+    "proseWrap": "always"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "bun run prettier --",
+      "bun run lint:fix --",
+      "git add --"
+    ],
+    "*.{md,css}": [
+      "bun run prettier --",
+      "git add --"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "chokidar": "^5.0.0",
+    "eslint": "^9.39.2",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "firebase-admin": "^13.6.0",
+    "firebase-tools": "^15.1.0",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "open": "^11.0.0",
+    "picocolors": "^1.1.1",
+    "prettier": "^3.7.4"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "firebase": "^12.7.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-error-boundary": "^6.0.0",
+    "react-google-recaptcha-v3": "^1.11.0",
+    "react-router": "^7.11.0",
+    "styled-components": "^6.1.19"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "dir": "rtl",
+  "lang": "en-US",
+  "short_name": "Website title short name",
+  "name": "Hello, World!",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000",
+  "theme_color": "#000",
+  "description": "Website description here",
+  "icons": [{
+      "src": "favicon.ico",
+      "sizes": "192x192",
+      "type": "image/ico"
+    }, {
+      "src": "favicon.ico",
+      "sizes": "512x512",
+      "type": "image/ico"
+  }]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--PWA-->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Description" content="Create a description for your app here.">
+    <meta name="theme-color" content="#000000"> <!--  Use your preferred theme color  -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--For sharing purposes-->
+    <meta property="og:url" content="https://google.com/"/> <!--  Enter your web address here  -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Title your website here"/>
+    <meta property="og:description" content="Describe your website here (short)"/>
+    <meta property="og:image" content="Use an image, like your favicon.ico image / logo here"/>
+    <meta property="og:image:alt" content="Alt text for the image you used"/>
+
+    <title>Hello, World!</title>
+
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--  Use a preferred Google font here. If not using, you can remove the two previous lines as well  -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap&font-display=swap" rel="preload" as="font">
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
+    <div id="main" role="main">
+    </div>
+    <script async defer type="module" src="/main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('/serviceWorker.js')
+          .then(() => console.log('Service Worker Registered'))
+          .catch(err => console.error('Error registering service worker:', err))
+      }
+    </script>
+  </body>
+  <noscript>
+    Please enable JavaScript in order for your browser to view the content of this page.
+  </noscript>
+</html>
