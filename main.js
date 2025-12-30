@@ -15,7 +15,10 @@ function main() {
 
   root.render(
     <ApiProvider api={api}>
-      <GoogleReCaptchaProvider reCaptchaKey={process.env.RECAPTCHA_SITE_KEY}>
+      <GoogleReCaptchaProvider
+        reCaptchaKey={process.env.ENTERPRISE_RECAPTCHA_SITE_KEY}
+        useEnterprise
+      >
         <ThemeProvider theme={{ fontFamily: 'Open Sans, sans-serif' }}>
           <GlobalStyle />
           <App />
